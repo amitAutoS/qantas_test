@@ -2,6 +2,10 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["pageRepository/*"],
+      "@lib/*": ["lib/*"]
+    }
   }
 }

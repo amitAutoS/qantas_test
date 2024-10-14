@@ -1,4 +1,6 @@
 import { defineConfig } from "@playwright/test";
+import { testConfig } from "./testConfig";
+import "dotenv/config";
 
 /**
  * Read environment variables from file.
@@ -21,6 +23,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
+  timeout: 2 * 60 * 1000,
   reportSlowTests: null,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: "html",
@@ -35,35 +38,38 @@ export default defineConfig({
         suiteTitle: true,
         environmentInfo: {
           framework: "playwright",
-          URL: process.env.URL,
         },
       },
     ],
   ],
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-  use: {
-    launchOptions: {
-      args: ["--start-maximized"],
-    },
-    baseURL: process.env.URL,
-    screenshot: "on",
-    video: "on",
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "on-first-retry",
-    headless: false,
-    ignoreHTTPSErrors: true,
-  },
-
-  /* Configure projects for major browsers */
   projects: [
     {
       name: "chromium",
       use: {
         // ...devices['Desktop Chrome'] ,
         viewport: null,
+        launchOptions: {
+          args: ["--start-maximized"],
+        },
+        baseURL: testConfig.web,
+        screenshot: "on",
+        video: "on",
+        /* Base URL to use in actions like `await page.goto('/')`. */
+        // baseURL: 'http://127.0.0.1:3000',
+
+        /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+        trace: "retain-on-failure",
+        headless: false,
+        ignoreHTTPSErrors: true,
+      },
+    },
+
+    {
+      name: "Api",
+      use: {
+        baseURL: testConfig.api,
+        trace: "on",
       },
     },
 

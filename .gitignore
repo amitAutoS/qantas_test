@@ -5,3 +5,8 @@ node_modules/
 /playwright/.cache/
 /allure-results
 /allure-report
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
