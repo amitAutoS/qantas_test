@@ -1,0 +1,43 @@
+{
+  "name": "qantas_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webtest": "rimraf allure-report && rimraf allure-results && playwright test --grep @ui",
+    "apitest": "rimraf allure-report && rimraf allure-results && playwright test --grep @api",
+    "allureReport": "allure generate ./allure-results --clean && allure open",
+    "clean-report": "rimraf allure-results",
+    "allureSingleReport": "allure generate ./allure-results --single-file --clean",
+    "playwrightReport": "playwright show-report",
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "prettier . --write",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint",
+    "*.{ts,css,md,html,json}": "npm run format"
+  },
+  "keywords": [],
+  "author": "Amit Saldi",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.5",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "allure-commandline": "^2.30.0",
+    "allure-js-commons": "^3.0.4",
+    "allure-playwright": "^3.0.4",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.11.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.8.1"
+  }
+}
