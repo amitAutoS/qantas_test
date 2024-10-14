@@ -51,6 +51,7 @@ export default defineConfig({
         viewport: null,
         launchOptions: {
           args: ["--start-maximized"],
+          slowMo: 1000,
         },
         baseURL: testConfig.web,
         screenshot: "on",

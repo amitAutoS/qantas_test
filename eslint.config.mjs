@@ -9,7 +9,7 @@ export default [
   ...tseslint.configs.recommended,
   {
     rules: {
-      "@typescript-eslint/noexplicit-any": "off",
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
 ];

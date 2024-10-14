@@ -1,0 +1,12 @@
+{
+  "products": [
+    "Sauce Labs Backpack",
+    "Sauce Labs Fleece Jacket",
+    "Sauce Labs Onesie"
+  ],
+  "checkoutDetails": {
+    "firstName": "Auto",
+    "lastName": "Test",
+    "zipCode": "3000"
+  }
+}
