@@ -1,9 +1,10 @@
-<h1 align="center">
+<!-- <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=21&center=true&vCenter=true&width=500&height=70&duration=4000&pause=2000&lines=QE Code Challenge using Playwright;" />
-</h1>
-
+</h1> -->
+<h2 align="left">About</h2>
 This repo covers both the UI and API tests as per outlined in the Qantas test code challenge
-<br/>
+<br />
+<br />
 
 <h2 align="left">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 
@@ -12,10 +13,13 @@ This repo covers both the UI and API tests as per outlined in the Qantas test co
 ![Node.js Badge](https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white)
 ![Visual Studio Code Badge](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?logo=visualstudiocode&logoColor=fff&style=for-the-badge)
 <br/>
+<br />
 
 <h2 align="left">Pre-requisite</h2>
 
 You will need nodeJS to build this project. The UI test suite is configured to run on Chromium but can be modified to run on any browser we like.
+<br />
+<br />
 
 <h2 align="left">Setup Instructions</h2>
 
@@ -31,6 +35,8 @@ You will need nodeJS to build this project. The UI test suite is configured to r
 
 `npx playwright install`
 
+<br />
+
 <h2 align="left">Execution</h2>
 
 - For running the UI tests:
@@ -40,6 +46,8 @@ You will need nodeJS to build this project. The UI test suite is configured to r
 - For running the API tests:
 
 `npm run apitest`
+
+<br />
 
 <h2 align="left">Reporting</h2>
 
