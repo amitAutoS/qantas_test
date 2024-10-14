@@ -35,6 +35,23 @@ You will need nodeJS to build this project. The UI test suite is configured to r
 
 `npx playwright install`
 
+3. The env data is stored in the vault (refer to .env.vault file). You'll need the vault key for running the tests.
+   Following is included in the .env files stored in the vault:
+
+WEATHERBIT_API_KEY
+
+SAUCEDEMO_USERID
+
+SAUCEDEMO_PASSWORD
+
+If running on mac, set the env key (DOTENV_KEY) like this:
+
+`export DOTENV_KEY='dotenv://:key_e0b8517d246b8d93ac871a246b9eedf120d548cefb8ea243442524838258554f@dotenv.local/vault/.env.vault?environment=development'`
+
+If running on windows, then set the env key (DOTENV_KEY) like this:
+
+`$env:DOTENV_KEY='dotenv://:key_e0b8517d246b8d93ac871a246b9eedf120d548cefb8ea243442524838258554f@dotenv.local/vault/.env.vault?environment=development'`
+
 <br />
 
 <h2 align="left">Execution</h2>
