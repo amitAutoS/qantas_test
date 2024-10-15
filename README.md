@@ -27,15 +27,19 @@ You will need nodeJS to build this project. The UI test suite is configured to r
 
 `git clone git@github.com:amitAutoS/qantas_test.git`
 
-2. Install dependencies
+2. Get the intended branch
 
 `cd qantas_test`
+
+`git checkout feature/AmitSaldi-QloyalCodeTest`
+
+3. Install dependencies
 
 `npm install`
 
 `npx playwright install`
 
-3. The env data is stored in the vault (refer to .env.vault file). You'll need the vault key for running the tests.
+4. The env data is stored in the vault (refer to .env.vault file). You'll need the vault key for running the tests.
    Following is included in the .env files stored in the vault:
 
 WEATHERBIT_API_KEY
