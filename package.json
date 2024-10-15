@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webtest": "rimraf allure-report && rimraf allure-results && playwright test --grep @ui --project=chromium",
-    "apitest": "rimraf allure-report && rimraf allure-results && playwright test --grep @api",
+    "apitest": "rimraf allure-report && rimraf allure-results && playwright test --grep @api --project=Api",
     "allureReport": "allure generate ./allure-results --clean && allure open",
     "clean-report": "rimraf allure-results",
     "allureSingleReport": "allure generate ./allure-results --single-file --clean",
