@@ -77,3 +77,19 @@ If running on windows, then set the env key (DOTENV_KEY) like this:
 `npm run allureSingleReport`
 
 This will produce single HTML report(index.html) under the folder allure-report
+
+<h2 align="left">API Report screenshot</h2>
+
+![alt text](reporting-screenshots/api-tests-1.png)
+
+- For looking at the Traces in the report:
+
+![alt text](reporting-screenshots/Trace.png)
+
+<h2 align="left">UI Report</h2>
+
+![alt text](reporting-screenshots/ui-tests-1.png)
+
+- Video capability has been added to the report:
+
+![alt text](reporting-screenshots/ui-tests-2.png)
