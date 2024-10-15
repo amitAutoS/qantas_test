@@ -1,5 +1,5 @@
 {
-  "currentWeather": [
+  "currentWeatherByLatLon": [
     {
       "lat": "38",
       "lon": "-78.25"
@@ -12,5 +12,6 @@
       "lat": "35.7796",
       "lon": "-78.6382"
     }
-  ]
+  ],
+  "currentWeatherByPostCode": ["27601", "28546", "94016"]
 }
